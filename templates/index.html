@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>Karangwuni Berseri</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fontawesome.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/templatemo-sixteen.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.css') }}">
+
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="margin-bottom: 50px;"><h2 class="footertext">HOAX DETECTION <em>WEBSITE</em></h2></a>
+          <div class="gambar4">
+            <a href="index.html"><img src="static/images/kemendikbud.png" alt="gunung kidul" style="height: 80px;width:80px;top: -17px;"></a>
+            <a href="index.html"><img src="static/images/kampus.png" alt="kkn ugm" style="height: 60px;width:90px; top: -15px;"></a>
+            <a href="index.html"><img src="static/images/dikti.png" alt="harmoni semuni" style="height: 80px;width:90px; top: -10px;"></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <section class="header1">
+      <div class="text-box">
+        <h1 style="font-size: 50px;">Detect Fake News</h1>
+        <form method="POST", action="{{url_for('home')}}" style="margin-top: 50px;">
+            <b> Enter News Title :  <input type="text", name='news', placeholder="news title"> <br><br>
+            <br></b>
+            <input type="submit" class="hero-btn" , value='Predict' >
+        </form>
+        {% if data %}
+            <p>Image is a {{data}}</p>
+        {% endif %}
+      </div>
+    </section>
+    <!-- Banner Ends Here -->
+
+
+  </body>
+
+</html>
