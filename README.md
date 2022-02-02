@@ -1,1 +1,1 @@
-### Basic Hoax-Detection with Logistic Regression
+### Basic Hoax Analyzer with Logistic Regression
